@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://www.youtube.com/player_api"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header_section">
+        <div class="inner_header_section">
+            <div class="logo">
+                <img src="/images/logo.png">
+            </div>
+            <div class="menu_search">
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tv_shows">TV Shows</a></li>
+                    <li><a href="#latest">Latest</a></li>
+                    <li><a href="#trending_now">Trending Now</a></li>
+                    <li><a href="#action">Action</a></li>
+                    <li><a href="#originals">Original</a></li>
+                </ul>
+            </div>
+            <ul class="right_menu">
+                <li class="right_menu_list"><i class="fa fa-search"></i></li>
+                <li class="right_menu_list"><a href="/"><button type="button">Log out</button></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="home_section">
+        <div class="inner_home_section">
+            <div class="slider slider-1 show ">
+                <div class="slider_content">
+                    <h2>Lucifer</h2>
+                    <p>Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides
+                        to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City
+                        of Angels.</p>
+                    <div class="button_div">
+                        <button class="watch home_button">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <p> More Info</p>
+                        </button>
+                        <button class="more_info home_button">
+                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            <p> Play</p>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider slider-2 ">
+                <div class="slider_content">
+                    <h2>Kung Fu Panda</h2>
+                    <p>Legendary warrior Po teams up with an elite English knight on a global quest to rescue magical
+                        weapons, restore his reputation — and save the world!</p>
+                    <div class="button_div">
+                        <button class="watch home_button">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <p> More Info</p>
+                        </button>
+                        <button class="more_info home_button">
+                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            <p> Play</p>
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="slider-points">
+                <span class="slider_1_point active"></span>
+                <span class="slider_1_point "></span>
+            </div>
+
+        </div>
+    </div>
+    <section class="popular_shows">
+        <div class="popular-on-netflix">
+            <h4 id="latest">Latest</h4>
+            <span class="movie-scroll-btn movie-scroll-left-btn" onclick="scrollshowleft(1)"><i class="fa fa-angle-left" aria-hidden="true"></i>
+            </span>
+            <div class="inner_popular_shows box">
+                <div class="show_card">
+                    <img src="./tranding_on_netflix/all_of_us_dead.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./tranding_on_netflix/money_heist.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./tranding_on_netflix/rana_naidu.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./tranding_on_netflix/sex_life_poster.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./tranding_on_netflix/the-sandman.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./tranding_on_netflix/the-night-agent.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./tranding_on_netflix/wednesday.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+            </div>
+            <span class="movie-scroll-btn movie-scroll-right-btn" onclick="scrollshows(1)"><i class="fa fa-angle-right" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="popular-on-netflix k-drama">
+            <h4>K- Drama</h4>
+            <span class="movie-scroll-btn movie-scroll-left-btn k-drama-left" onclick="scrollshowleft(2)"><i class="fa fa-angle-left" aria-hidden="true"></i>
+            </span>
+            <div class="inner_popular_shows box">
+                <div class="show_card">
+                    <img src="./k_drama/bussiness_proposal.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./k_drama/crash_landing_on_you.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./k_drama/hometown_chacha.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./k_drama/its_ok_to_be_not_ok.jpg">
+                    <div class="overlay">
+                        <button class="play-button">&#9658;</button>
+                        <button class="backward-button">&#9664;</button>
+                        <button class="forward-button">&#9654;</button>
+                      </div>
+                </div>
+                <div class="show_card">
+                    <img src="./k_drama/k-drama-bussiness-proposal.jpg">
+                </div>
+                <div class="show_card">
+                    <img src="./k_drama/trading_hounting _of_hill.jpg">
+                </div>
+                <div class="show_card">
+                    <img src="./k_drama/squid_game.jpg">
+                </div>
+            </div>
+            <span class="movie-scroll-btn movie-scroll-right-btn" onclick="scrollshows(2)"><i class="fa fa-angle-right" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="popular-on-netflix p">
+            <h4>Popular on Netflix</h4>
+            <span class="movie-scroll-btn movie-scroll-left-btn k-drama-left" onclick="scrollshowleft(3)"><i class="fa fa-angle-left" aria-hidden="true"></i>
+            </span>
+        <div class="inner_popular_shows box">
+            <div class="show_card"><img src="/bloob_master/p1.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div>
+            </div>
+            <div class="show_card"><img src="/bloob_master/p2.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div>
+            </div>
+            <div class="show_card"><img src="/bloob_master/p3.png" >
+                <div class="overlay">
+                <button class="play-button">&#9658;</button>
+                <button class="backward-button">&#9664;</button>
+                <button class="forward-button">&#9654;</button>
+              </div>
+            </div>
+            <div class="show_card"><img src="/bloob_master/p4.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/p5.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/p6.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+          </div>
+          <span class="movie-scroll-btn movie-scroll-right-btn" onclick="scrollshows(3)"><i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+      </div>
+      <div class="popular-on-netflix t">
+        <h4 id="trending_now">Trending Now</h4>
+        <span class="movie-scroll-btn movie-scroll-left-btn k-drama-left" onclick="scrollshowleft(4)"><i class="fa fa-angle-left" aria-hidden="true"></i>
+        </span>
+        <div class="inner_popular_shows box">
+            <div class="show_card"><img src="/bloob_master/t1.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/t2.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/t3.png" ></div>
+            <div class="show_card"><img src="/bloob_master/t4.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/t5.png" ></div>
+            <div class="show_card"><img src="/bloob_master/t6.png" ></div>
+          </div>
+          <span class="movie-scroll-btn movie-scroll-right-btn" onclick="scrollshows(4)"><i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+      </div>
+          
+      <div class="popular-on-netflix tv">
+        <h4 id="tv_shows">TV Shows</h4>
+        <span class="movie-scroll-btn movie-scroll-left-btn k-drama-left" onclick="scrollshowleft(5)"><i class="fa fa-angle-left" aria-hidden="true"></i>
+        </span>
+        <div class="inner_popular_shows box">
+            <div class="show_card"><img src="/bloob_master/tv1.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/tv2.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/tv3.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv4.png" >
+                <div class="overlay">
+                    <button class="play-button">&#9658;</button>
+                    <button class="backward-button">&#9664;</button>
+                    <button class="forward-button">&#9654;</button>
+                  </div></div>
+            <div class="show_card"><img src="/bloob_master/tv5.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv6.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv7.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv8.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv9.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv10.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv11.png" ></div>
+            <div class="show_card"><img src="/bloob_master/tv12.png" ></div>
+          </div>
+          <span class="movie-scroll-btn movie-scroll-right-btn" onclick="scrollshows(5)"><i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+      </div>
+      <div class="popular-on-netflix m">
+        <h4 id="action">Blockbuster Action & Adventure</h4>
+        <span class="movie-scroll-btn movie-scroll-left-btn k-drama-left" onclick="scrollshowleft(6)"><i class="fa fa-angle-left" aria-hidden="true"></i>
+        </span>
+        <div class="inner_popular_shows box">
+            <div class="show_card"><img src="/bloob_master/m1.png" ></div>
+            <div class="show_card"><img src="/bloob_master/m2.png" ></div>
+            <div class="show_card"><img src="/bloob_master/m3.png" ></div>
+            <div class="show_card"><img src="/bloob_master/m4.png" ></div>
+            <div class="show_card"><img src="/bloob_master/m5.png" ></div>
+            <div class="show_card"><img src="/bloob_master/m6.png" ></div>
+          </div>
+          <span class="movie-scroll-btn movie-scroll-right-btn" onclick="scrollshows(6)"><i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+      </div>
+          
+      <div class="popular-on-netflix o">
+        <h4 id="originals">Netflix Originals</h4>
+        <span class="movie-scroll-btn movie-scroll-left-btn k-drama-left" onclick="scrollshowleft(7)"><i class="fa fa-angle-left" aria-hidden="true"></i>
+        </span>
+        <div class="inner_popular_shows box">
+            <div class="show_card"><img src="/bloob_master/o1.png" ></div>
+            <div class="show_card"><img src="/bloob_master/o2.png" ></div>
+            <div class="show_card"><img src="/bloob_master/o3.png" ></div>
+            <div class="show_card"><img src="/bloob_master/p11.png" ></div>
+            <div class="show_card"><img src="/bloob_master/t6.png" ></div>
+            <div class="show_card"><img src="/bloob_master/p6.png" ></div>
+          </div>
+          <span class="movie-scroll-btn movie-scroll-right-btn" onclick="scrollshows(7)"><i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+      </div>
+          
+    </section>
+    <footer class="footer">
+    <h2>Questions? Call 000-800-919-1694</h2>
+    <div class="links-list">
+        <div class="link-items">
+            <a href="#">FAQ</a>
+            <a href="#">Media Centre</a>
+            <a href="#">Ways to Watch</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Speed Test</a>
+            <div class="dropdown_bar">
+                <span class="material-icons language">language</span>
+                <select class="language_selection">
+                   <option value="english">English</option> 
+                   <option value="hindi">Hindi</option>
+                </select>
+            </div>
+            <p class="copyright-txt">Netflix India</p>
+        </div>
+        <div class="link-items">
+            <a href="#">Help Centre</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Legal Notices</a>
+        </div>
+        <div class="link-items">
+            <a href="#">Account</a>
+            <a href="#">Jobs</a>
+            <a href="#">Privacy</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Only on Netflix</a>
+        </div>
+    </div>
+</footer>
+    <script>
+        let slidevar=1;
+        function changeSlide(slider)
+        {
+            let sliderNo=document.querySelectorAll('.slider');
+            let sliderpoint=document.querySelectorAll('.slider-points span');
+            for(i=0;i<sliderNo.length;i++)
+            {
+                sliderNo[i].classList.remove('show')
+                sliderpoint[i].classList.remove('active')
+            }
+            if(slidevar>2)
+            {
+                slidevar=1;
+                slider=1;
+            }
+            sliderNo[slider-1].classList.add('show')
+            sliderpoint[slider-1].classList.add('active')
+        }
+        setInterval(()=>{
+            changeSlide(slidevar);
+            slidevar+=1;
+        },5000);
+
+        function scrollshows(number)
+        {
+            if(number==1)
+            {
+                let scrollableContent=document.querySelector('.inner_popular_shows box');
+                if(scrollableContent.scrollLeft==0)
+                {
+                    document.querySelector('.movie-scroll-left-btn').style.opacity=1;
+                }
+                scrollableContent.scrollLeft+=700;
+            }
+            else
+            {
+                let kDramascrollableContent=document.querySelector('.k-drama .inner_popular_shows box');
+                if(kDramascrollableContent.scrollLeft==0)
+                {
+                    document.querySelector('.k-drama-left').style.opacity=1;
+                }
+                kDramascrollableContent.scrollLeft+=700;
+            }
+        }
+
+        function scrollshowleft(number)
+        {
+            if(number==1)
+            {
+                let scrollableContent=document.querySelector('.inner_popular_shows box');
+                if(scrollableContent.scrollLeft==0)
+                {
+                    document.querySelector('.movie-scroll-btn').style.opacity=0;
+                }
+                scrollableContent.scrollLeft-=700;
+            }
+            else
+            {
+                let kDramascrollableContent=document.querySelector('.k-drama .inner_popular_shows box');
+                if(kDramascrollableContent.scrollLeft==0)
+                {
+                    document.querySelector('.k-drama-left').style.opacity=0;
+                }
+                kDramascrollableContent.scrollLeft-=700;
+            }
+        }
+    </script>
+</body>
+
+</html>

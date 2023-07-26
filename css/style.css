@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+    color: #fff;
+}
+  .top-header,
+  .features,
+  .faq-list {
+    border-bottom: 8px solid #535251;
+    overflow: hidden;
+  }
+  .top-header {
+    height: 95vh;
+    background: url("./images/background-1.jpg");
+  }
+  
+  .container {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .navItems img {
+    width: 13.5%;
+  }
+  .dropdown_bar {
+    position: relative;
+  }
+
+  .sign-in {
+    background-color: #e50914;
+    padding: 10px 14px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .email-holder {
+    display: flex;
+    gap: 10px;
+    width: 60%;
+    margin-top: 20px;
+  }
+  
+  .email-holder input {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #585858;
+    color: white;
+    padding: 18px 10px;
+    font-size: 16px;
+  }
+
+  .email-holder label {
+    position: absolute;
+    left: 33%;
+    top: 68.5%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 15px;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+  }
+  .email-holder input:focus ~ label,
+  .email-holder input:valid ~ label {
+    font-size: 13px;
+    transform: translateY(-130%);
+  }
+
+  .language_selection {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .language,
+  .drop-down {
+    position: absolute;
+    top: 8px;
+  }
+  
+  .drop-down {
+    right: -2px;
+  }
+
+  .navItems {
+    margin: 0 180px;
+    padding-top: 23px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .right_one {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .content {
+    margin: 26vh auto;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content h1,
+  .content p {
+    margin-top: 20px;
+  }
+  
+  .content h1 {
+    font-size: 43px;
+    font-weight: 900;
+  }
+  
+  .content p {
+    font-size: 23px;
+    font-weight: 200;
+    padding-top: 15px;
+  }   
+  /* Feature styles */
+.features {
+  padding: 50px 11%;
+  font-size: 22px;
+}
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.text-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.features h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.features p {
+  font-size: 25px;
+}
+.img-col video {
+  position: absolute;
+  right: 200px;
+  margin-top: -380px;
+  z-index: -1;
+}
+.setup {
+  width: 50%;
+  position: relative;
+  bottom: 105px;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  border-radius: 8px;
+  border: 2px solid #585858;
+}
+.setup p {
+font-size: 15px;
+padding-left: 5px;
+}
+.setup p span {
+color: blue;
+}
+.setup img {
+padding-left: 12px;
+width: 60px;
+}
+  /* FAQ section styles */
+  .faq-list {
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .faq-list h1 {
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .questions {
+    width: 100%;
+    max-width: 1150px;
+  }
+  
+  .questions li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .questions li label {
+    display: flex;
+    align-items: center;
+    padding: 32px;
+    font-size: 26px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .questions li label:hover {
+    background-color: #535251;
+  }
+  
+  .questions li label::after {
+    content: '+';
+    font-size: 70px;
+    position: absolute;
+    right: 20px;
+    transition: 0.5s;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .questions .answer {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+  
+  .questions input[type="radio"]:checked + label + .answer {
+    max-height: 600px;
+    padding: 30px 20px;
+  }
+  
+  .questions input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+  }
+  
+  .questions .answer p {
+    font-size: 24px;
+  }
+  small {
+    font-size: 20px;
+  }
+  /* Footer styles */
+  .footer {
+    padding: 50px 15% 10px;
+    color: #707070;
+  }
+  
+  .footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 80px;
+  }
+.footer .link-items {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+  }
+.footer .link-items a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.footer .links-list {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.copyright-txt {
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+/* Media Queries for screen sizes up to 600px */
+@media (max-width: 600px) {
+  .navItems {
+    margin: 0 2px;
+  }
+  .navItems img {
+    width: 100px;
+  }
+  .language_selection {
+    padding: 12px 22px;
+  }
+  .right_one {
+    gap: 10px;
+  }
+  .sign-in {
+    height: 40px;
+  }
+  .content {
+    position: relative;
+    transform: none;
+    margin-top: 50px;
+  }
+  .content h1 {
+    font-size: 30px;
+  }
+  .content p {
+    font-size: 18px;
+  }
+  .email-holder {
+    width: 155%;
+  }
+  .email-holder button {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+  .email-holder label {
+    padding-top: 225px;
+    margin-left: -125px;
+  }
+  .get-started-sign-in {
+    height: 52px;
+  }
+  .text-col,
+  .img-col {
+    flex-basis: 100%;
+  }
+  .features h1 {
+    font-size: 30px;
+  }
+  .features p {
+    font-size: 15px;
+  }
+  .img-col video {
+    position: absolute;
+    right: 107px;
+    margin-top: -232px;
+    width: 58%;
+    z-index: -1;
+  }
+}
+
+/* Media Queries for screen sizes up to 1024px */
+@media (max-width: 1024px) {
+  .navItems {
+    margin: 0 50px;
+  }
+
+  .right_one {
+    gap: 20px;
+  }
+
+  .content {
+    width: 70%;
+    margin: 23vh auto;
+  }
+
+  .content h1 {
+    font-size: 40px;
+  }
+
+  .content p {
+    font-size: 20px;
+  }
+
+  .email-holder {
+    width: 70%;
+  }
+
+  .email-holder input {
+    padding: 18px 12px;
+    font-size: 16px;
+  }
+
+  .language_selection {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .faq-list {
+    padding: 30px;
+  }
+
+  .faq-list h1 {
+    font-size: 40px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .questions li label {
+    font-size: 24px;
+  }
+
+  .questions li label::after {
+    font-size: 60px;
+  }
+
+  .questions .answer p {
+    font-size: 22px;
+  }
+
+  .footer h2 {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  .footer .link-items {
+    flex-basis: 33.333%;
+    flex-grow: 1;
+    margin-bottom: 15px;
+  }
+
+  .footer .link-items a {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Media Queries for screen sizes up to 480px */
+@media (max-width: 480px) {
+  .navItems {
+    margin: 0 10px;
+  }
+
+  .content {
+    width: 90%;
+    margin: 20vh auto;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .email-holder input {
+    padding: 15px 8px;
+    font-size: 14px;
+  }
+
+  .language_selection {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+
+  .faq-list {
+    padding: 10px;
+  }
+
+  .faq-list h1 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .questions li label {
+    font-size: 20px;
+  }
+
+  .questions li label::after {
+    font-size: 50px;
+  }
+
+  .questions .answer p {
+    font-size: 18px;
+  }
+
+  .footer h2 {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .footer .link-items a {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+}

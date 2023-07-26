@@ -1,0 +1,808 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
+    position: relative;
+    font-family: sans-serif;
+}
+body::-webkit-scrollbar
+{
+    display: none;
+}
+.header_section
+{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.inner_header_section
+{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.inner_header_section .logo
+{
+    width: 150px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_header_section .logo>img{
+    width: 100%;
+    height: 65%;
+}
+.menu_search
+{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+}
+ul
+{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu
+{
+    height: 100%;
+}
+a{
+    text-decoration: none;    
+}
+.menu>li{
+    margin: 10px;
+    font-size: 16px;
+}
+.menu>li>a{
+    color: #efefef;
+}
+.right_menu
+{
+    display: flex;
+    padding: 10px;
+}
+.right_menu>li
+{
+    font-size: 17px;
+    color: #efefef;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 99;
+}
+.right_menu_list a button{
+    width: 85px;
+    height: 38px;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #e36714;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+
+/* Slider Section */
+
+.home_section
+{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.inner_home_section
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.slider
+{
+    height: 100%;
+    min-width: 0;
+    position: relative;
+    transition: all 1.5s;
+    overflow: hidden;
+}
+.slider.show
+{
+    min-width: 100%;    
+}
+.slider_content
+{
+    position: absolute;
+    margin-left: 50px;
+    width: 400px;
+    right: 200px;
+    bottom: 20px;
+    text-align: justify;
+}
+.slider-1
+{
+    background: url("/images/slider_2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.slider-2
+{
+    background: url("/images/kungfupanda.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.slider-2>.slider_content
+{
+    left: 20px;
+    bottom: 100px;
+}
+
+.slider_content>h2{
+    font-size: 25px;
+    color: #efefef;
+}
+.slider_content>p{
+    font-size: 15px;
+    color: #efefef;
+    line-height: 1.8em;
+}
+.button_div
+{
+    display: flex;
+}
+.home_button
+{
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: rgba(255,255,255,0.8) 0 0 35px 8px inset;
+}
+.home_button>i{
+    font-size: 25px;
+    
+}
+.home_button>p{
+    font-weight: 600;
+    margin-left: 3px;
+}
+.slider-points
+{
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    bottom: 5%;
+    left: 45%;
+}
+.slider-points>span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    z-index: 99;
+    background: #fff;    
+}
+.slider-points>span.active:nth-child(1)
+{
+    width: 20px;
+    margin-left: 0px;
+    border-radius: 5px;
+    transition: all 0.5s ;
+}
+.slider-points>span.active:nth-child(2)
+{
+    width: 20px;
+    margin-left: 0px;
+    border-radius: 5px;
+    transition: all 0.5s ;
+}
+/* popular Shows */
+
+
+.popular_shows
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+
+}
+
+.popular-on-netflix
+{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;    
+}
+
+.popular-on-netflix>h4{
+    margin: 0;
+    margin-left: 15px;
+    width: 95%;
+    padding: 4px;
+    color: #fff;
+}
+.inner_popular_shows
+{
+    width: 95%;
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+    overflow-x: scroll;
+    justify-content: space-between;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.inner_popular_shows::-webkit-scrollbar
+{
+    display: none;
+}
+.box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+  }
+
+  .box .show_card {
+    transition: transform 0.3s;
+  }
+
+  .box .show_card:hover {
+    transition: transform .3s;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);  
+    transform: scale(1.2);
+    transform-origin: center;
+  }
+
+  .box img {
+    border-radius: 2px;
+  }
+.inner_popular_shows {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .show_card {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .show_card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .show_card:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+.show_card
+{
+    min-width: 300px;
+    height: 95%;
+    margin: 0 10px;
+}
+.show_card>img
+{
+    width: 100%;
+    height: 100%;
+}
+.inner_popular_shows {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .show_card {
+    position: relative;
+
+  }
+  
+  .show_card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+  }
+  
+  .overlay button {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .show_card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .show_card:hover button {
+    opacity: 1;
+  }
+  
+.movie-scroll-btn
+{
+    position: absolute;
+    font-size: 25px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    color: red;
+    box-shadow: #0c0c0c 0 0 35px 8px inset;
+    z-index: 99;
+}
+.movie-scroll-left-btn
+{
+    opacity: 0;
+    left: 25px;
+    z-index: 99;
+}
+
+.subscribe_section
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: #0c0c0c -220px 250px 50px inset;
+}
+.subscribe_section::before
+{    
+    position: absolute;
+    content: '';
+    background: #0c0c0c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+.subscribe_section>h3{
+    width: 800px;
+    text-align: center;
+    font-size: 55px;
+    color: #fff;
+    margin: 0;
+    position: relative;
+}
+.subscribe_section>p{
+    width: 800px;
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+    margin: 0;
+    margin-top: 20px;
+    position: relative;
+}
+.subscribe_section>button
+{
+    width: 150px;
+    height: 50px;
+    background: rgb(211,9,26);
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+}
+.footer {
+    padding: 50px 15% 10px;
+    color: #707070;
+  }
+  
+  .footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 80px;
+  }
+.footer .link-items {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+  }
+.footer .link-items a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.footer .links-list {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.copyright-txt {
+  font-size: 15px;
+  margin-top: 40px;
+}
+/* Media Queries for screen sizes up to 480px */
+@media (max-width: 480px) {
+    .inner_header_section {
+      width: 85%;
+    }
+  
+    .menu_search {
+      width: 80%;
+    }
+  
+    .navItems {
+      margin: 0 5px;
+    }
+  
+    .right_menu {
+      padding: 3px;
+    }
+  
+    .slider_content {
+      width: 60%;
+      right: 0;
+      margin-left: 5px;
+    }
+  
+    .slider_content>h2 {
+      font-size: 16px;
+    }
+  
+    .slider_content>p {
+      font-size: 12px;
+    }
+  
+    .popular-on-netflix {
+      height: 150px;
+    }
+  
+    .inner_popular_shows {
+      padding: 3px 0;
+    }
+  
+    .show_card {
+      min-width: 150px;
+    }
+  
+    .show_card>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .movie-scroll-btn {
+      font-size: 18px;
+    }
+  
+    .subscribe_section {
+      height: 70vh;
+    }
+  
+    .subscribe_section>h3 {
+      font-size: 40px;
+    }
+  
+    .subscribe_section>p {
+      font-size: 16px;
+    }
+  
+    .subscribe_section>button {
+      width: 130px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+/* Media Queries for screen sizes up to 480px */
+@media only screen and (max-width: 480px) {
+    .inner_header_section {
+      width: 90%;
+    }
+  
+    .menu_search {
+      width: 80%;
+    }
+  
+    .navItems {
+      margin: 0 5px;
+    }
+  
+    .right_menu {
+      padding: 3px;
+    }
+  
+    .slider_content {
+      width: 70%;
+      right: 0;
+      margin-left: 5px;
+    }
+  
+    .slider_content>h2 {
+      font-size: 16px;
+    }
+  
+    .slider_content>p {
+      font-size: 12px;
+    }
+  
+    .popular-on-netflix {
+      height: 150px;
+    }
+  
+    .inner_popular_shows {
+      padding: 3px 0;
+    }
+  
+    .show_card {
+      min-width: 150px;
+    }
+  
+    .show_card>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .movie-scroll-btn {
+      font-size: 18px;
+    }
+  
+    .subscribe_section {
+      height: 70vh;
+    }
+  
+    .subscribe_section>h3 {
+      font-size: 40px;
+    }
+  
+    .subscribe_section>p {
+      font-size: 16px;
+    }
+  
+    .subscribe_section>button {
+      width: 130px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  
+  /* Media Queries for screen sizes up to 480px */
+@media (max-width: 480px) {
+    .inner_header_section {
+      width: 90%;
+    }
+  
+    .menu_search {
+      width: 80%;
+    }
+  
+    .menu > li {
+      font-size: 14px;
+      margin: 8px;
+    }
+  
+    .slider_content {
+      width: 70%;
+      right: 0;
+      margin-left: 5px;
+    }
+  
+    .slider_content > h2 {
+      font-size: 16px;
+    }
+  
+    .slider_content > p {
+      font-size: 12px;
+    }
+  
+    .popular-on-netflix {
+      height: 150px;
+    }
+  
+    .inner_popular_shows {
+      padding: 3px 0;
+    }
+  
+    .show_card {
+      min-width: 150px;
+    }
+  
+    .show_card > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .movie-scroll-btn {
+      font-size: 18px;
+    }
+  
+    .subscribe_section {
+      height: 70vh;
+    }
+  
+    .subscribe_section > h3 {
+      font-size: 40px;
+    }
+  
+    .subscribe_section > p {
+      font-size: 16px;
+    }
+  
+    .subscribe_section > button {
+      width: 130px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  
+  /* Media Queries for screen sizes up to 768px */
+  @media (max-width: 768px) {
+    .inner_header_section {
+      width: 90%;
+    }
+  
+    .menu_search {
+      width: 85%;
+    }
+  
+    .slider_content {
+      width: 80%;
+      right: 150px;
+      margin-left: 20px;
+    }
+  
+    .slider_content > h2 {
+      font-size: 20px;
+    }
+  
+    .slider_content > p {
+      font-size: 14px;
+    }
+  
+    .inner_popular_shows {
+      padding: 5px 0;
+    }
+  
+    .show_card {
+      min-width: 200px;
+    }
+  
+    .movie-scroll-btn {
+      font-size: 20px;
+    }
+  
+    .subscribe_section {
+      height: 80vh;
+    }
+  
+    .subscribe_section > h3 {
+      font-size: 45px;
+    }
+  
+    .subscribe_section > p {
+      font-size: 18px;
+    }
+  
+    .subscribe_section > button {
+      width: 150px;
+      height: 45px;
+      font-size: 20px;
+    }
+  }
+  
+  /* Media Queries for screen sizes up to 1024px */
+  @media (max-width: 1024px) {
+    .inner_header_section {
+      width: 90%;
+    }
+  
+    .menu_search {
+      width: 85%;
+    }
+  
+    .slider_content {
+      width: 80%;
+      right: 200px;
+      margin-left: 50px;
+    }
+  
+    .slider_content > h2 {
+      font-size: 25px;
+    }
+  
+    .slider_content > p {
+      font-size: 15px;
+    }
+  
+    .inner_popular_shows {
+      padding: 10px 0;
+    }
+  
+    .show_card {
+      min-width: 300px;
+    }
+  
+    .movie-scroll-btn {
+      font-size: 25px;
+    }
+  
+    .subscribe_section {
+      height: 90vh;
+    }
+  
+    .subscribe_section > h3 {
+      font-size: 55px;
+    }
+  
+    .subscribe_section > p {
+      font-size: 19px;
+    }
+  
+    .subscribe_section > button {
+      width: 150px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+  
