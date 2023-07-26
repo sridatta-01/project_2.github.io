@@ -81,7 +81,7 @@ Open the project files and locate the database configuration section. Update the
 Clone the Repository:
 
 ```
-link
+(https://sridatta-01.github.io/project_2.github.io/)
 ```
 
 ## 🔧 Running the tests <a name = "tests"></a>
